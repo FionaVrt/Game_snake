@@ -100,8 +100,8 @@ document.addEventListener('DOMContentLoaded', function () {
         update();
         draw();
         setTimeout(function(){
-              requestAnimationFrame(gameLoop);
-        }, 100);
+            requestAnimationFrame(gameLoop);
+        }, 197);
        
     }
 
