@@ -102,7 +102,6 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(function(){
             requestAnimationFrame(gameLoop);
         }, 197);
-       
     }
 
     // Démarrer la boucle de jeu
