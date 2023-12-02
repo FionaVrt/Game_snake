@@ -58,15 +58,15 @@ document.addEventListener('DOMContentLoaded', function () {
     function handleKeyPress(event) {
         const key = event.key.toUpperCase();
 
-        if (['Z','Q','S','D','Arrowup','ArrowLeft','ArrowDown','ArrowRight'].includes(key)){
+        if (['Z','Q','S','D','ARROWUP','ARROWLEFT','ARROWDOWN','ARROWRIGHT'].includes(key)){
             // Ignorer les entrées opposées à la direction actuelle
-        if ((key === 'Z' || key === 'ArrowUp') && direction !== 'DOWN') {
+        if ((key === 'Z' || key === 'ARROWUP') && direction !== 'DOWN') {
             direction = 'UP';
-        } else if ((key === 'Q' || key === 'ArrowDown') && direction !== 'UP') {
+        } else if ((key === 'Q' || key === 'ARROWDOWN') && direction !== 'UP') {
             direction = 'DOWN';
-        } else if ((key === 'S' || key === 'ArrowLeft') && direction !== 'RIGHT') {
+        } else if ((key === 'S' || key === 'ARROWLEFT') && direction !== 'RIGHT') {
             direction = 'LEFT';
-        } else if ((key === 'D' || key === 'ArrowRight') && direction !== 'LEFT') {
+        } else if ((key === 'D' || key === 'ARROWRIGHT') && direction !== 'LEFT') {
             direction = 'RIGHT';
         }
     }
