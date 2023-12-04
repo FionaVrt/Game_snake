@@ -18,15 +18,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function draw() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        ctx.fillStyle = '#00F';
-        snake.forEach(segment => {
+    
+        snake.forEach((segment, index) => {
+            const segmentClass = index === 0 ? 'head' : 'body';
+            ctx.fillStyle = `.${segmentClass}`;
             ctx.fillRect(segment.x * snakeSize, segment.y * snakeSize, snakeSize, snakeSize);
         });
-
-        ctx.fillStyle = '#F00';
-        ctx.fillRect(food.x * snakeSize, food.y * snakeSize, snakeSize, snakeSize);
+    
+        const cookie = document.getElementById('cookie'); // Assurez-vous que l'ID est correct
+        ctx.drawImage(cookie, food.x * snakeSize, food.y * snakeSize, snakeSize, snakeSize);
     }
+    
 
     function update() {
         // mise à jour de position
